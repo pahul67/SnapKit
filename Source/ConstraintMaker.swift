@@ -177,7 +177,9 @@ public class ConstraintMaker {
     }
     
     internal static func removeConstraints(view view: ConstraintView) {
-        
+        for layoutConstraint in view.snp.installedLayoutConstraints {
+            layoutConstraint.constraint?.uninstall()
+        }
     }
     
 }
