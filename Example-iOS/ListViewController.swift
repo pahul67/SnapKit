@@ -19,22 +19,22 @@ class ListViewController: UITableViewController {
         
         self.title = "SnapKit iOS Demos"
         
-        self.tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: kCellIdentifier)
+        self.tableView?.register(UITableViewCell.self, forCellReuseIdentifier: kCellIdentifier)
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier)! as UITableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: kCellIdentifier)! as UITableViewCell
         
         cell.textLabel?.text = demos[indexPath.row]
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return demos.count
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             let viewController = SimpleLayoutViewController()
             navigationController?.pushViewController(viewController, animated: true)

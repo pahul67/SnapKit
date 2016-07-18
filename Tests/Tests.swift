@@ -32,7 +32,7 @@ class SnapKitTests: XCTestCase {
     func testLayoutGuideConstraints() {
         #if os(iOS) || os(tvOS)
         let vc = UIViewController()
-        vc.view = UIView(frame: CGRectMake(0, 0, 300, 300))
+        vc.view = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
         
         vc.view.addSubview(self.container)
         
@@ -243,8 +243,8 @@ class SnapKitTests: XCTestCase {
         
         let constraints = view.snp_constraints as! [NSLayoutConstraint]
         
-        XCTAssertEqual(constraints[0].firstAttribute, NSLayoutAttribute.Width, "Should be width")
-        XCTAssertEqual(constraints[1].firstAttribute, NSLayoutAttribute.Height, "Should be height")
+        XCTAssertEqual(constraints[0].firstAttribute, NSLayoutAttribute.width, "Should be width")
+        XCTAssertEqual(constraints[1].firstAttribute, NSLayoutAttribute.height, "Should be height")
         XCTAssertEqual(constraints[0].constant, 50, "Should be 50")
         XCTAssertEqual(constraints[1].constant, 50, "Should be 50")
     }
@@ -276,11 +276,11 @@ class SnapKitTests: XCTestCase {
         
         let constraints = container.snp_constraints as! [NSLayoutConstraint]
         
-        XCTAssertEqual(constraints[0].firstAttribute, NSLayoutAttribute.Top, "Should be top")
-        XCTAssertEqual(constraints[1].firstAttribute, NSLayoutAttribute.Bottom, "Should be bottom")
+        XCTAssertEqual(constraints[0].firstAttribute, NSLayoutAttribute.top, "Should be top")
+        XCTAssertEqual(constraints[1].firstAttribute, NSLayoutAttribute.bottom, "Should be bottom")
         
-        XCTAssertEqual(constraints[0].secondAttribute, NSLayoutAttribute.Top, "Should be top")
-        XCTAssertEqual(constraints[1].secondAttribute, NSLayoutAttribute.Bottom, "Should be bottom")
+        XCTAssertEqual(constraints[0].secondAttribute, NSLayoutAttribute.top, "Should be top")
+        XCTAssertEqual(constraints[1].secondAttribute, NSLayoutAttribute.bottom, "Should be bottom")
         
         XCTAssertEqual(constraints[0].firstItem as? View, view, "Should be added subview")
         XCTAssertEqual(constraints[1].firstItem as? View, view, "Should be added subview")
