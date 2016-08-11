@@ -330,7 +330,7 @@ internal class ConcreteConstraint: Constraint {
         #endif
         
         // set install info
-        self.installInfo = ConcreteConstraintInstallInfo(view: installOnView, layoutConstraints: HashTable.weakObjects())
+        self.installInfo = ConcreteConstraintInstallInfo(view: installOnView, layoutConstraints: NSHashTable.weakObjects())
         
         // store which layout constraints are installed for this constraint
         for layoutConstraint in newLayoutConstraints {
@@ -377,9 +377,10 @@ internal class ConcreteConstraint: Constraint {
 private struct ConcreteConstraintInstallInfo {
     
     weak var view: View? = nil
-    let layoutConstraints: HashTable<AnyObject>
+    let layoutConstraints: NSHashTable<AnyObject>
     
 }
+
 
 private extension NSLayoutAttribute {
     

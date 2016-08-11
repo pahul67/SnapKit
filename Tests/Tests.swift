@@ -232,7 +232,7 @@ class SnapKitTests: XCTestCase {
         self.container.addSubview(view)
         
         view.snp_makeConstraints { (make) -> Void in
-            make.size.equalTo(CGSizeMake(50, 50))
+            make.size.equalTo(CGSize(width: 50, height: 50))
             make.left.top.equalTo(self.container)
         }
         

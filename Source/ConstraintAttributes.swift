@@ -30,7 +30,7 @@ import AppKit
 /**
     Used to define `NSLayoutAttributes` in a more concise and composite manner
 */
-internal struct ConstraintAttributes: OptionSet, Boolean {
+internal struct ConstraintAttributes: OptionSet {
     
     internal init(rawValue: UInt) {
         self.rawValue = rawValue
