@@ -17,10 +17,10 @@ class BasicUIScrollViewController: UIViewController {
     
     let label: UILabel = {
         let label = UILabel()
-        label.backgroundColor = .blue()
+        label.backgroundColor = .blue
         label.numberOfLines = 0
         label.lineBreakMode = .byClipping
-        label.textColor = .white()
+        label.textColor = .white
         label.text = NSLocalizedString("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", comment: "")
         return label
     }()
@@ -28,11 +28,11 @@ class BasicUIScrollViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.white()
+        view.backgroundColor = UIColor.white
         
         view.addSubview(scrollView)
         
-        contentView.backgroundColor = UIColor.lightGray()
+        contentView.backgroundColor = UIColor.lightGray
         scrollView.addSubview(contentView)
         contentView.addSubview(label)
         
@@ -44,11 +44,11 @@ class BasicUIScrollViewController: UIViewController {
         if (!didSetupConstraints) {
             
             scrollView.snp_makeConstraints { make in
-                _ = make.edges.equalTo(view).inset(UIEdgeInsetsZero)
+                _ = make.edges.equalTo(view).inset(UIEdgeInsets.zero)
             }
             
             contentView.snp_makeConstraints { make in
-                _ = make.edges.equalTo(scrollView).inset(UIEdgeInsetsZero)
+                _ = make.edges.equalTo(scrollView).inset(UIEdgeInsets.zero)
                 _ = make.width.equalTo(scrollView)
             }
             

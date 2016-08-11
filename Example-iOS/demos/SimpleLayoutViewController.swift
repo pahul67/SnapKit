@@ -14,38 +14,38 @@ class SimpleLayoutViewController: UIViewController {
 
     let blackView: UIView = {
         let view = UIView()
-        view.backgroundColor = .black()
+        view.backgroundColor = .black
         return view
     }()
 
     let redView: UIView = {
         let view = UIView()
-        view.backgroundColor = .red()
+        view.backgroundColor = .red
         return view
     }()
 
     let yellowView: UIView = {
         let view = UIView()
-        view.backgroundColor = .yellow()
+        view.backgroundColor = .yellow
         return view
     }()
 
     let blueView: UIView = {
         let view = UIView()
-        view.backgroundColor = .blue()
+        view.backgroundColor = .blue
         return view
     }()
 
     let greenView: UIView = {
         let view = UIView()
-        view.backgroundColor = .green()
+        view.backgroundColor = .green
         return view
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.white()
+        view.backgroundColor = UIColor.white
 
         view.addSubview(blackView)
         view.addSubview(redView)

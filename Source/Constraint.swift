@@ -427,14 +427,14 @@ private extension NSLayoutAttribute {
                 }
             #else
                 switch self {
-                case .Left, .CenterX: return point.x
-                case .Top, .CenterY, .LastBaseline: return point.y
-                case .Right: return point.x
-                case .Bottom: return point.y
-                case .Leading: return point.x
-                case .Trailing: return point.x
-                case .Width, .Height, .NotAnAttribute: return CGFloat(0)
-                case .FirstBaseline: return point.y
+                case .left, .centerX: return point.x
+                case .top, .centerY, .lastBaseline: return point.y
+                case .right: return point.x
+                case .bottom: return point.y
+                case .leading: return point.x
+                case .trailing: return point.x
+                case .width, .height, .notAnAttribute: return CGFloat(0)
+                case .firstBaseline: return point.y
                 }
             #endif
         }
@@ -454,16 +454,16 @@ private extension NSLayoutAttribute {
                 }
             #else
                 switch self {
-                case .Left, .CenterX: return insets.left
-                case .Top, .CenterY, .LastBaseline: return insets.top
-                case .Right: return insets.right
-                case .Bottom: return insets.bottom
-                case .Leading: return  (Config.interfaceLayoutDirection == .LeftToRight) ? insets.left : -insets.right
-                case .Trailing: return  (Config.interfaceLayoutDirection == .LeftToRight) ? insets.right : -insets.left
-                case .Width: return -insets.left + insets.right
-                case .Height: return -insets.top + insets.bottom
-                case .NotAnAttribute: return CGFloat(0)
-                case .FirstBaseline: return insets.bottom
+                case .left, .centerX: return insets.left
+                case .top, .centerY, .lastBaseline: return insets.top
+                case .right: return insets.right
+                case .bottom: return insets.bottom
+                case .leading: return  (Config.interfaceLayoutDirection == .leftToRight) ? insets.left : -insets.right
+                case .trailing: return  (Config.interfaceLayoutDirection == .leftToRight) ? insets.right : -insets.left
+                case .width: return -insets.left + insets.right
+                case .height: return -insets.top + insets.bottom
+                case .notAnAttribute: return CGFloat(0)
+                case .firstBaseline: return insets.bottom
                 }
             #endif
         }

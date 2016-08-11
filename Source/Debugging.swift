@@ -178,18 +178,18 @@ private extension NSLayoutAttribute {
         }
         #else
         switch self {
-        case .NotAnAttribute:       return "notAnAttribute"
-        case .Top:                  return "top"
-        case .Left:                 return "left"
-        case .Bottom:               return "bottom"
-        case .Right:                return "right"
-        case .Leading:              return "leading"
-        case .Trailing:             return "trailing"
-        case .Width:                return "width"
-        case .Height:               return "height"
-        case .CenterX:              return "centerX"
-        case .CenterY:              return "centerY"
-        case .LastBaseline:             return "baseline"
+        case .notAnAttribute:       return "notAnAttribute"
+        case .top:                  return "top"
+        case .left:                 return "left"
+        case .bottom:               return "bottom"
+        case .right:                return "right"
+        case .leading:              return "leading"
+        case .trailing:             return "trailing"
+        case .width:                return "width"
+        case .height:               return "height"
+        case .centerX:              return "centerX"
+        case .centerY:              return "centerY"
+        case .lastBaseline:             return "baseline"
         default:                    return "default"
         }
         #endif
